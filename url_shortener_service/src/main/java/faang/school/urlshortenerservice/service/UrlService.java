@@ -39,7 +39,7 @@ public class UrlService {
 
         urlRepository.save(url);
         urlCacheRepository.save(hash, urlDto.getUrl());
-        return new UrlDto(shortenerUrl + hash);
+        return new UrlDto(shortenerUrl + "url/" + hash);
     }
 
     @Transactional(readOnly = true)
