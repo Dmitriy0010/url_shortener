@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+<button id="themeToggle" class="theme-toggle" aria-label="Сменить тему">
+  <span class="icon sun">☀</span>
+  <span class="icon moon">🌙</span>
+</button>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">URL Shortener</p>
+        <h1>Создай короткую ссылку за пару секунд</h1>
+        <p class="lede">Отправь длинный адрес и получи готовую короткую ссылку с возможностью скопировать и открыть.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Сокращение</p>
+          <h2>Создать короткую ссылку</h2>
+        </div>
+      </div>
+      <form id="shortenForm" class="stack" novalidate>
+        <label class="field">
+          <span class="field-label">Длинная ссылка</span>
+          <div class="input-row">
+            <input id="originalUrl" name="url" type="url" required placeholder="https://example.com/some/very/long/path" spellcheck="false" />
+            <button type="submit" id="submitBtn">Сократить</button>
+          </div>
+        </label>
+      </form>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <div id="result" class="result hidden">
+        <div class="result-row">
+          <div>
+            <p class="eyebrow">Готово</p>
+            <a id="shortLink" class="short-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <p class="hint" id="shortOriginal"></p>
+          </div>
+          <div class="actions">
+            <button type="button" id="copyBtn" class="ghost">Скопировать</button>
+            <button type="button" id="openBtn">Открыть</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Журнал</p>
+          <h2>Созданные ссылки</h2>
+        </div>
+        <button type="button" id="clearHistory" class="ghost">Очистить</button>
+      </div>
+      <div id="history" class="history"></div>
+    </section>
+  </main>
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Email: email@mail.com</p>
+                <p>Телефон: +7 123 456-78-90</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VK</a>
+                <a href="#">MAX</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UrlShortener. Все права защищены.</p>
+        </div>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
